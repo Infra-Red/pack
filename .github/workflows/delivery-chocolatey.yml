@@ -12,7 +12,7 @@ jobs:
   prepare-chocolatey:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Determine version
         shell: bash
         run: echo "::set-env name=PACK_VERSION::`echo ${{ github.event.release.tag_name }} | cut -d "v" -f2`"
@@ -56,7 +56,7 @@ jobs:
     runs-on: windows-latest
     needs: [prepare-chocolatey]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Download artifacts
         uses: actions/download-artifact@v1
         with:

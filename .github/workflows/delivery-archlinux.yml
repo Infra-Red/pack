@@ -32,7 +32,7 @@ jobs:
       - name: Set PACK_VERSION
         run: echo "::set-env name=PACK_VERSION::${{ steps.version.outputs.result }}"
         shell: bash
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Setup working dir
         run: |
           mkdir -p ${{ env.PACKAGE_NAME }}
@@ -90,7 +90,7 @@ jobs:
       - name: Set PACK_VERSION
         run: echo "::set-env name=PACK_VERSION::${{ steps.version.outputs.result }}"
         shell: bash
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Setup working dir
         run: |
           mkdir -p ${{ env.PACKAGE_NAME }}/
