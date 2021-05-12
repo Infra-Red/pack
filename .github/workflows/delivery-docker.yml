@@ -34,9 +34,9 @@ jobs:
 
             return tag.replace(/^v/, '');
       - name: Checkout workflow
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: Checkout source at tag
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           path: ./src
           ref: v${{ steps.version.outputs.result }}
