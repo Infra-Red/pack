@@ -18,7 +18,7 @@ jobs:
       PACKAGE_NAME: pack-cli
     steps:
       - name: Determine version
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4.0.2
         id: version
         with:
           result-encoding: string
@@ -76,7 +76,7 @@ jobs:
       PACKAGE_NAME: pack-cli-bin
     steps:
       - name: Determine version
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4.0.2
         id: version
         with:
           result-encoding: string
@@ -96,7 +96,7 @@ jobs:
           mkdir -p ${{ env.PACKAGE_NAME }}/
           cp .github/workflows/delivery/archlinux/${{ env.PACKAGE_NAME }}/PKGBUILD ${{ env.PACKAGE_NAME }}/PKGBUILD
       - name: Lookup assets
-        uses: actions/github-script@v1
+        uses: actions/github-script@v4.0.2
         id: assets
         with:
           script: |
